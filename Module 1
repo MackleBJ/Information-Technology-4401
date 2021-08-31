@@ -1,0 +1,17 @@
+*** Challenge: AboutMe ***
+
+Description: Write a Python program called aboutme.py contained in a folder called AboutMe that displays information about you.
+
+Purpose: The goal of this challenge is to learn how to write, test, package, and submit a first Python program. Submit a zip file of 
+  the AboutMe folder containing the aboutme.py file.
+
+Requirements:
+
+In this programming challenge you are to create a Python program called aboutme.py. In this program you are to print four or more lines 
+  of text about you using the Python print() statement. The first line of text you are to print is to be your name. The other lines can 
+  be any information you want to print.
+
+The aboutme.py file is to be placed in a folder named AboutMe.
+
+Once you have written the aboutme.py program located in the folder AboutMe and tested it to make sure it works without generating errors, 
+  you are to create a zip file of the folder and submit it on Canvas using the submission form for this assignment.
