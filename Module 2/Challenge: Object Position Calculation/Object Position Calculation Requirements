@@ -1,0 +1,89 @@
+*** Challenge: Object Position Calculation ***
+
+Description: Write a Python 3 program called objectposncalc.py that accepts user input from the keyboard for the initial position, initial velocity, 
+acceleration, and time that has passed and outputs the final position based on an equation provided in the requirements.
+
+Purpose: Provide experience with writing an interactive Python program that accepts input, performs a calculation, then displays the result as output.
+
+Requirements:
+
+In this programming challenge you are to write and submit your first interactive PythonLinks to an external site. program. In the program you are to accept 
+user input, perform a calculation, and display the result. You are to learn best practices in naming variables and creating user interactions.
+Write a Python 3 program called objectposncalc.py that accepts user input from the keyboard for the initial position, initial velocity, acceleration, and time 
+that has passed and outputs the final position based on the following equation.
+The final position, xf, of an object that has an initial position x0, an initial velocity v0, and an acceleration of a after a time t has passed is given by 
+the formula:
+
+xf = x0 + v0t + ½at2
+
+For example, if an object has an initial position of 4.2 meters, an initial velocity of 2.3 meters/second, and an acceleration of 5.8 meters/second2, the final 
+position of the object after 8.0 seconds can be calculated as follows.
+
+x0 = 4.2
+v0 = 2.3
+a = 5.8
+t = 8.0
+
+xf = 4.2 + 2.3 * 8.0 + 0.5 * 5.8 * 8.0 * 8.0
+xf = 4.2 + 2.3 * 8.0 + 0.5 * 5.8 * 64.0
+xf = 4.2 + 18.4 + 185.6
+xf = 208.2
+The final position of the object is 208.2 meters.
+
+Support
+The following information is provided to help you with the task.
+
+Section 2.6 Reading Input from the Keyboard in the textbook provides information on how to get input from the user. Note that the input from the keyboard 
+using the input() function is a string. To do the math you will need numbers. The functions int() and float() convert strings to numbers, but you have to 
+choose the correct one for the task. An int is a number that has no fractional (decimal) part like 3, 0, –1, or 9. A float is a number that can have a factional 
+part like 3.1415, –1.29, 7.4, or 11.0. Which do you think you should use for this program?
+If you answered float() you are correct. Positions, velocities, accelerations, and times are float type values because they can have fractional parts. So, make 
+sure the user input is converted to float type values.
+
+The In the Spotlight: Converting a Math Formula to a Programming Statement in Chapter 2 in the textbook is helpful for this assignment. Program 2–18 is analogous 
+to this assignment.
+There is not a way in Python to create variables with subscripts like x0 and v0. You need to come up with variable names for those values that convey their 
+meaning but don’t have the subscripts. x0, which is read as “x naughtLinks to an external site.”, means “initial position” so it would be reasonable to name 
+the variable something like initial_x or x_initial. The subscript 0, which is pronounced “naughtLinks to an external site.” typically means initial, or starting, 
+value when applied to a variable. The formula provided above is read as:
+The final position x is equal to the initial position x plus the initial velocity multiplied by the time that has passed plus one half of the acceleration 
+multiplied by the time that has passed squared.
+Variables should be chosen in a program so that they are easily understood as to their meaning and so that they are easy to read. Given that I would name 
+the variable for x0initial_x_position. There is no absolutely right or wrong variable name choice. It is all about being understood by others and being readable.
+Formatting so that input and output are readable and pleasant to the eye is important when writing a program with which a user interacts. Also, the prompts 
+provided to the user should be easy to understand and read. This is called user interface design, user interaction design, or user experience design. Even for 
+simple programs such as this one, it is important to design a good user interface (UI).
+
+The following are some points about UI relative to this programming assignment.
+
+Make sure there is a space between the prompt and the user input. The following is not desirable because there is no space between the prompt and the number the 
+user has entered. It looks jammed together. It is slightly harder to read/comprehend than with a space. And, with the space it is more visually appealing.
+
+Enter the first number:12
+
+The following contains the space for comparison.
+
+Enter the first number: 12
+
+Write the input() function so that it prompts the user with a space between the prompt and the user input.
+Provide the user with instructions if needed and make sure your prompts are understandable and clear. Imagine you are presented with a prompt like:
+
+i:
+
+What does that i mean? What is being requested? Let’s replace that with something slightly better:
+
+interest:
+
+That is better because it tells more than i alone does, but it still leaves me wondering what I am to enter. The interest as a percentage? (i.e. 12%) The interest as a decimal value? (i.e. 0.12) The interest as an amount of money? (i.e. $400) Finally, let’s look at the following prompt that makes it clearer as to what is being requested:
+
+Enter the annual interest rate as a decimal value:
+
+The programs you write for this class are to have thoughtfully created user interfaces!
+
+Testing
+Once you have written your program you need to test it. Choose values for inputs and get the result the program generates. Then, outside of the program using a calculator or hand calculation verify that the result is correct. Do this for several sets of input values. If you don’t get the same answer, figure out why and fix the problem.
+
+Submission
+Create a folder called ObjectPosnCalc to hold your program, objectposncalc.py.
+
+In the folder ObjectPosnCalc create or place your objectposncalc.py file. Then, ZIP the folder. The result should be a file named ObjectPosnCalc.zip. Submit the ZIP file using the submission form for this assignment.
