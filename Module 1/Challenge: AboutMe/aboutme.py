@@ -1,7 +1,7 @@
 # Brett M.
 # Aug 26, 2021
 # INFOTC 4401 - 01
-
+# Purpose: Utilize the print function to introduce myself to the instructor.
 
 my_name = "Brett M."
 my_age = 29
