@@ -1,0 +1,38 @@
+This programming challenge begins with the program you wrote for the Object Position Calculation challenge and incorporates additional requirements.
+
+Here are the requirements from the first programming assignment:
+
+The final position, 𝑥𝑓, of an object that has an initial position 𝑥0, an initial velocity 𝑣0, and an acceleration of 𝑎 after a time 𝑡 has passed is given by the
+formula:
+
+𝑥𝑓=𝑥0+𝑣0𝑡+12𝑎𝑡2
+
+Write a python program called “objectposncalc.py” that accepts user input from the keyboard for the initial position, initial velocity, acceleration, and time that
+has passed and outputs the final position based on the above equation.
+
+
+Here are the additional requirements for this programming assignment:
+User input may not cause the program to crash. Exceptions from invalid user input must be handled gracefully. The user is to be given feedback about invalid input
+and given the opportunity to supply the input without needing to run the program again.
+
+Negative elapsed times are not to be accepted from the user. If a negative time is provided the user is to be given feedback and asked again for the time. Other 
+inputs are to be allowed to be negative, zero, or positive. Only elapsed times are to be restricted to 0 and positive values.
+
+After each calculation the user is to be prompted if they want to perform another calculation. If they answer with a “y” then they are to be prompted for new input 
+and another calculation is to be performed. If they provide any other response the program is to exit.
+
+Make sure you read the Interactive Input and Exception Handling document in its entirety before doing this assignment.
+
+Testing
+Once you have written your program you need to test it. Choose values for inputs and get the result the program generates. Then, outside of the program using a 
+calculator or hand calculation verify that the result is correct. Do this for several sets of input values. If you don’t get the same answer figure out why and 
+fix the problem. Provide invalid inputs and check that the program correctly handles the invalid inputs. Check that inputs to the prompt to perform another 
+calculation are properly handled for a range of values.
+
+Submission
+Put your objectposncalc.py file in a folder named ImprovedObjectPosnCalc and zip the folder. The zip file is to be submitted for this assignment.
+
+
+
+
+
