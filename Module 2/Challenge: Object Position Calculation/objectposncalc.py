@@ -3,14 +3,11 @@
 # Challenge: Object Position Calculation
 # Purpose: Calculate an object's final position when given the initial position, initial velocity, acceleration, and time elapsed.
 
-print("Enter the initial position (meters): ")
-initial_position = float(input())
-print("Enter the initial velocity (meters/second): ")
-initial_velocity = float(input())
-print("Enter the acceleration (meters/second^2): ")
-acceleration = float(input())
-print("Enter the time elapsed (seconds): ")
-time = float(input())
+
+initial_position = float(input("Enter the initial position (meters): "))
+initial_velocity = float(input("Enter the initial velocity (meters/second): "))
+acceleration = float(input("Enter the acceleration (meters/second^2): "))
+time = float(input("Enter the time elapsed (seconds): "))
 
 final_position = initial_position + (initial_velocity * time) + ((1/2) * acceleration * time**2)
 print("\nInitial position = {} meters".format(initial_position))
