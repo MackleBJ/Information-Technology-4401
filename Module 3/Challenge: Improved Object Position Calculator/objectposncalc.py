@@ -2,6 +2,7 @@
 # INFOTC 4401-01
 # Challenge: Improved Object Position Calculation
 
+# A loop for the user to perform another calculation if they wish. 
 while True:
     # Ask user for initial position (with exception handling).
     try:
