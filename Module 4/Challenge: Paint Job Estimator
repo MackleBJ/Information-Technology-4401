@@ -1,0 +1,40 @@
+Challenge: Paint Job Estimator
+
+A painting company has determined that for every 350 square feet of wall space, one gallon of paint and six hours of labor are required.  The company charges 
+$62.25 per hour for labor. Write a program call paintjobestimator.py that asks the user to enter the square feet of wall space to be painted and the price of the 
+paint per gallon. The program is to display the following information.
+
+The number of gallons of paint required rounded up to whole gallons.
+The hours of labor required.
+The cost of the paint based on the rounded up whole gallons.
+The labor charges.
+The total cost of the paint job.
+At the end of one estimate the user it to be asked if they would like to perform another estimate. Use the prompt: Would you like to do another estimate? (y/n) If 
+the user answers y, then the program is to accept input for another estimate. If the user answers with anything other than y, the program is to exit.
+
+The user input should not be able to crash the program. If the user provides invalid input the program should tell the user why the input is invalid and ask again 
+for the input.  
+
+The square feet of wall space and the price of the paint per gallon must be positive values. If the user enters 0 or a negative value, the program should tell the 
+user why the input is invalid and ask again for the input. 
+
+The output is to be nicely formatted. Hours of labor is to be displayed to one decimal point (example: 12.4 hours). Gallons of paint is to be displayed as an 
+integer value with nothing shown to the right of the decimal point (example: 5). Total labor charges is to be displayed to two decimal points and a $ is to be 
+displayed at the start of the total labor charge value (example: $152.64).
+
+The gallons of paint is rounded up to whole gallons because the paint is colored and mixed in whole gallons.  If paint is left over it can’t be used on another 
+job.  You will need to find a way in Python to do the math to calculate the gallons of paint so that the result is a whole number that is a rounded up value based 
+on the division of the square feet of space by the 350 square feet per gallon.  For example, if the area to be painted is 1800 square feet, then 1800 / 350 is 
+5.142857 gallons.  The rounded up whole gallons result is 6.  Five gallons of paint is not enough.  The need for some amount more than 5 gallons means the job 
+requires 6 gallons even if all of it will not be used.
+
+Testing
+Once you have written your program you need to test it. Choose values for inputs and get the result the program generates. Then, outside of the program using a calculator or hand calculation verify that the result is correct. Do this for several sets of input values. If you don’t get the same answer figure out why and fix the problem. Provide invalid inputs and check that the program correctly handles the invalid inputs. Check that inputs to the prompt to perform another calculation are properly handled.
+
+Submission
+Put your paintjobestimator.py file in a folder named PaintJobEstimator and zip the folder. The zip file is to be submitted for this assignment.
+
+
+
+
+
