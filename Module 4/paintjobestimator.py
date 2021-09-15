@@ -35,7 +35,7 @@ while True:
 
     # Print out all information calculated.
     print("The number of gallons of paint required {}".format(int(gallons_of_paint)))
-    print("The hours of labor required {0:.1f}".format(float(hours_of_work)))
+    print("The hours of labor required {0:.1f}".format(hours_of_work))
     print("The cost of the paint ${0:.2f}".format(cost_of_paint))
     print("The labor charges ${0:.2f}".format(cost_of_labor))
     print("The total cost of the paint job ${0:.2f}".format(total_cost))
