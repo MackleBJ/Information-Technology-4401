@@ -1,3 +1,7 @@
+# Brett M.
+# INFOTC 4401-01
+# Challenge: Random Number File Writer
+
 import random
 
 # Function to get limits
