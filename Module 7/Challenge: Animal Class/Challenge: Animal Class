@@ -1,0 +1,64 @@
+Description: Create a class in Python 3 named Animal that has specified attributes and methods.
+
+Purpose: The purpose of this challenge is to provide experience creating a class and working with OO concepts in Python 3.
+
+Requirements:
+
+Write a class in Python 3 named Animal that has the following attributes and methods and is saved in the file Animal.py.
+
+Attributes
+__animal_type is a hidden attribute used to indicate the animal’s type. For example: gecko, walrus, tiger, etc.
+
+__name is a hidden attribute used to indicate the animal’s name.
+
+__mood is a hidden attribute used to indicate the animal’s mood. For example: happy, hungry, or sleepy.
+
+Methods
+__init__ is to define the three attributes above and assign their default values.
+
+The value of __mood is to be set randomly. Generate a random number between 1 and 3. Then:
+
+If the number is 1, the __mood attribute is to be set to a value of happy.
+If the number is 2, the __mood attribute is to be set to a value of hungry.
+If the number is 3, the __mood attribute is to be set to a value of sleepy.
+
+get_animal_type should return the value of the __animal_type field.
+
+get_name should return the value of the __name field.
+
+check_mood should return the value of the __mood field.
+
+Animal Generator Program
+Once you have created the Animal class, create another Python file called animalGenerator.py. This program is to use Animal.py as a module.
+
+In animalGenerator.py, prompt the user to enter the name and type of an animal. Create a new Animal object instance to store this data. Then, 
+ask the user if they would like to repeat the process. They should be able to create as many Animal object instances as they would like.
+
+After the user is done creating animals, the program is to use the object’s accessor methods (get_animal_type, get_name, and check_mood) to retrieve 
+the name, type, and mood of each animal. This information is to be formatted and displayed as shown in the sample program output below.
+
+Welcome to the animal generator!
+This program creates Animal objects.
+
+What type of animal would you like to create? Gecko
+What is the animal’s name? Gordon
+
+Would you like to add more animals (y/n)? y
+
+What type of animal would you like to create? Walrus
+What is the animal’s name? Wally
+
+Would you like to add more animals (y/n)? y
+
+What type of animal would you like to create? Tiger
+What is the animal’s name? Truman
+
+Would you like to add more animals (y/n)? n
+
+Animal List:
+Gordon the Gecko is hungry
+Wally the Walrus is sleepy
+Truman the Tiger is hungry
+
+Testing
+Run the program you write and verify that the information entered matches the information displayed and that the input prompts and output utilize the format specification provided.
