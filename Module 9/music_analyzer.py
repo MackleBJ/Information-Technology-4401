@@ -8,27 +8,23 @@ from collections import OrderedDict
 def retrieveFile():
     file_lines = []
 
-    file_name = input("Please enter the name of the file: ")
-    file = open(file_name, "r", encoding = "utf-16")
+    while True:
+        try:
+            file_name = input("\nPlease enter the name of the file: ")
+            file = open(file_name, "r", encoding = "utf-16")
+            break
+        except:
+            continue
     for line in file:
         line = line.split("\t")
         file_lines.append(line)
     file.close()
+
     return file_lines
-
-# Function to find the name of all songs in the list.
-def find_song_name(file):
-    song_name_list = []
-    for index in file:
-        song_name = index[0]
-        song_name_list.append(song_name)
-
-    return song_name_list
 
 # Function to find total number of songs in file.
 def find_number_of_songs(file):
     song_total = len(file)
-    print("Total number of songs: {}\n".format(song_total))
 
     return song_total
 
@@ -39,7 +35,7 @@ def number_songs_released_each_year(file):
     for song in file:
         year = song[16]
         if year == "":
-            year = "Unknown"
+            year = "Unknown Year"
         if year in songs_each_year:
             songs_each_year[year] += 1
         else:
@@ -70,6 +66,7 @@ def find_longest_song(file):
             continue
 
     longest_song = {}
+
     for index in song_index:
         song = file[index]
         longest_song[song[0]] = song[1]
@@ -99,6 +96,7 @@ def find_shortest_song(file):
             continue
 
     shortest_song = {}
+
     for index in song_index:
         song = file[index]
         shortest_song[song[0]] = song[1]
@@ -143,30 +141,84 @@ def find_genre_data(file):
             genre_list.append([genre, 1, song_time, song_time, {song_name:song_artist}, {song_name:song_artist}])
             genres_found.append(genre)
 
-
-    for genre in genre_list:
-        print(genre)
+    return genre_list
 
 # Function to determine if the song has been played or not.
+def find_if_song_played(file):
+    song_played = [0,0]
+
+    for song in file:
+        if song[25] == "":
+             song_played[0] += 1
+        else:
+            song_played[1] += 1
+
+    return song_played
 
 # Function to display songs released each year data.
-def display_songs_each_year_data(song_years_dict):
+def display_all_data(total, song_per_year, long_song, short_song, genre_data, song_played):
+    print("\n\n**** Music Playlist Data ****\n")
+    print("Total number of songs in the playlist: {}\n".format(total))
     song_year_ordered_dict = OrderedDict(sorted(song_years_dict.items(), key=lambda key:key[0]))
-    print("Number of songs release each year in playslist: ")
+    print("Number of songs released each year in playslist: ")
     for key, value in song_year_ordered_dict.items():
         print("   {} : {}".format(key,value))
+    for key, value in long_song.items():
+        if value == "":
+            value = "Unknown Artist"
+        print("\nThe longest song in the playlist:\n   Name: {}\n   Artist: {}".format(key,value))
+    for key, value in short_song.items():
+        if value == "":
+            value = "Unknown Artist"
+        print("\nThe shortest song in the playlist:\n   Name: {}\n   Artist: {}".format(key,value))
+    print("\nGenre specific data:")
+    for genre in genre_data:
+        long_name_artist = genre[4]
+        short_name_artist = genre[5]
+        song_count = genre[1]
+
+        print("\n   Number of {} songs in playlist: {}".format(genre[0], genre[1]))
+        if song_count == 1:
+            for key, value in long_name_artist.items():
+                if value == "":
+                    value = "Unknown Artist"
+                print("\tLongest & shortest {} song in playlist:\n   \t   Name: {}\n   \t   Artist: {}".format(genre[0],key,value))
+        else:
+            for key, value in long_name_artist.items():
+                if value == "":
+                    value = "Unknown Artist"
+                print("\tLongest {} song in playlist:\n   \t   Name: {}\n   \t   Artist: {}".format(genre[0],key,value))
+            for key, value in short_name_artist.items():
+                if value == "":
+                    value = "Unknown Artist"
+                print("\tShortest {} song in playlist:\n   \t   Name: {}\n   \t   Artist: {}".format(genre[0],key,value))
+    print("\nSong play data:")
+    print("   Number of songs played: {}".format(song_played[1]))
+    print("   Number of songs not yet played: {}\n".format(song_played[0]))
 
 
 
-file = retrieveFile()
-file.pop(0)
-for song in file:
-    print(song, "\n")
 
-find_song_name(file)
-find_number_of_songs(file)
-song_years_dict = number_songs_released_each_year(file)
-overall_longest_song = find_longest_song(file)
-overall_shortest_song = find_shortest_song(file)
-find_genre_data(file)
-display_songs_each_year_data(song_years_dict)
+print("*****************************")
+print("* Welcome to Music Analyzer *")
+print("*****************************\n")
+
+while True:
+    file = retrieveFile()
+    file.pop(0)
+
+    total_number_of_songs = find_number_of_songs(file)
+    song_years_dict = number_songs_released_each_year(file)
+    overall_longest_song = find_longest_song(file)
+    overall_shortest_song = find_shortest_song(file)
+    genre_data = find_genre_data(file)
+    is_song_played = find_if_song_played(file)
+
+    display_all_data(total_number_of_songs, song_years_dict,overall_longest_song,overall_shortest_song,genre_data,is_song_played)
+
+    answer = input("Would you like to analyze another song? (y/n) ")
+    if answer == 'y':
+        continue
+    else:
+        print("\nHave a great day!\n")
+        break
